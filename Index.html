@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi princesa 💕 </title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        /* Estilo para el video */
+        video {
+            width: 700px; /* Ajusta el ancho máximo según el contenedor */
+            height: 400px; /* Permite que el alto se ajuste proporcionalmente */
+            display: block; /* Evita espacios no deseados */
+            margin: 0 auto; /* Centra el video horizontalmente */
+        }
+        /* Estilo para el div */
+        #miMensaje {
+            display: none; /* Ocultar por defecto */
+            margin: 20px auto; /* Centrar el div horizontalmente */
+            text-align: center; /* Centrar el texto */
+            padding: 20px; /* Espaciado interno */
+            border: 2px solid #ff0000;
+            border-radius: 15px; /* Bordes redondeados */
+            background-color: #ffffff;
+            font-family: 'Courier New', Courier, monospace; /* Fuente personalizada */
+            font-size: 18px; /* Tamaño de fuente */
+            color: #d60000; /* Color del texto */
+        }
+        /* Estilo para el botón */
+        .form-label {
+            font-weight: bold;
+            font-size: 20px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Coloca la barra de navegación aquí -->
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="mb-3">
+                <label for="textoInput" class="form-label">Hola amorcito, escriba "oteiiii"</label>
+                <input type="text" id="textoInput" class="form-control">
+            </div>
+            <div id="miMensaje">
+                <p>
+                 Te quiero mucho mi vale preciosa, le doy gracias a mi Dios por tenerte en mi vida, te llevo en mi corazon ❤️❤️❤️😍
+                </p>
+            </div>
+            <video id="miVideo" controls style="display: none;">
+                <source src="C:\Users\Eduardo\Downloads\x2mate.com-Cigarettes After Sex - Heavenly (Traducida al Español + Lyrics)-(1080p).mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </main>
+    <footer>
+        <!-- Coloca el pie de página aquí -->
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('textoInput').addEventListener('input', function() {
+            var texto = this.value.toLowerCase(); // Obtener el valor del input en minúsculas
+            var video = document.getElementById('miVideo');
+            var mensaje = document.getElementById('miMensaje');
+
+            if (texto.includes('oteiiii')) {
+                video.style.display = 'block'; // Mostrar el video
+                video.play(); // Reproducir el video automáticamente
+                mensaje.style.display = 'block'; // Mostrar el mensaje
+            } else {
+                video.pause(); // Pausar el video si el texto no incluye 'alexa'
+                video.style.display = 'none'; // Ocultar el video
+                mensaje.style.display = 'none'; // Ocultar el mensaje
+            }
+        });
+    </script>
+</body>
+</html>
